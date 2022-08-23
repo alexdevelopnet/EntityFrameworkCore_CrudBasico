@@ -1,4 +1,6 @@
 using EntityFrameworkCore_CrudBasico.Data;
+using EntityFrameworkCore_CrudBasico.Interfaces;
+using EntityFrameworkCore_CrudBasico.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +32,11 @@ namespace EntityFrameworkCore_CrudBasico
             {
                 options.UseSqlServer(Configuration.GetConnectionString("VitorConexao"));
             });
-            //services.AddScoped<IRepository, Repository>();
+            
+            services.AddScoped<ContextoCrudBasico>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
