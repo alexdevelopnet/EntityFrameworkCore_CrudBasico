@@ -1,0 +1,39 @@
+View ->  List - Create- Edit - Delete - Details
+
+Controller  -v List - Create- Edit - Delete - Details
+
+-IService ->  List - Create- Edit - Delete - Details
+
+Service -> List - Create- Edit - Delete - Details
+
+IRepository List - Create- Edit - Delete - Details
+
+Repository List - Create- Edit - Delete - Details
+  
+
+Contexto    DbSet<Produto> Produtos
+Modelo
+
+(Referencias de Banco de Dados- EntytyFramework core-design-tool-sqlServer)
+configuracaoDeBanco - Setup e JsonAppsettings
+Injecao De Dependencia
+
+
+
+service.AddScopd<Iservice,Senvice>();
+service.AddScopd<IRepository,Repository>();
+
+
+View  List - Create- Edit - Delete - Details
+Controller  List - Create- Edit - Delete - Details
+Interface BL - Service
+BL  List - Create- Edit - Delete - Details
+Interface DAl - Repoitory
+Dal List - Create- Edit - Delete - Details
+
+
+Dal - Comandos Sql por ADONET
+List - Create- Edit - Delete - Details
+Repository faz comandos c# usado LINQ que e igual aos SQL
+List - Create- Edit - Delete - Details LINQ
+

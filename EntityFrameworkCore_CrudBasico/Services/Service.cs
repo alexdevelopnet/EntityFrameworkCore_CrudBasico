@@ -17,7 +17,7 @@ namespace EntityFrameworkCore_CrudBasico.Services
         }
 
         public TEntity ObterPorId(int id)
-        {
+        {             
            return (TEntity)_repository.ObterPorId(id);
         }
         public void Alterar(TEntity entity)
