@@ -6,12 +6,12 @@ using System.Linq;
 
 namespace EntityFrameworkCore_CrudBasico.Data
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : EntityBase, new()
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : EntityBase
     {
         protected readonly ContextoCrudBasico _contexto;
         protected readonly DbSet<TEntity> DbSet;
 
-        public Repository(ContextoCrudBasico contexto)
+        public BaseRepository(ContextoCrudBasico contexto)
         {
             this._contexto = contexto;
             DbSet = contexto.Set<TEntity>();
@@ -23,7 +23,7 @@ namespace EntityFrameworkCore_CrudBasico.Data
 
         public TEntity ObterPorId(int id)
         {
-            return DbSet.AsNoTracking().Where(e => e.Id == id).FirstOrDefault();
+            return DbSet.AsNoTracking().Where(e => e. Id== id).FirstOrDefault();
         }
         public void Inserir(TEntity entity)
         {

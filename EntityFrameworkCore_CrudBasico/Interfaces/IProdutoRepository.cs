@@ -2,7 +2,7 @@
 
 namespace EntityFrameworkCore_CrudBasico.Interfaces
 {
-    public interface IProdutoRepository : IRepository<Produto>
+    public interface IProdutoRepository : IBaseRepository<Produto>
     {
 
     }

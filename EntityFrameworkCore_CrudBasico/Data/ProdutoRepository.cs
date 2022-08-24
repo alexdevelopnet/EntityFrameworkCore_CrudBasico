@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace EntityFrameworkCore_CrudBasico.Data
 {
-    public class ProdutoRepository : Repository<Produto>, IProdutoRepository
+    public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
         public ProdutoRepository(ContextoCrudBasico context) : base(context) { }
          

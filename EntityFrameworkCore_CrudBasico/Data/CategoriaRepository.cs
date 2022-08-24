@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EntityFrameworkCore_CrudBasico.Data
 {
-    public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
+    public class CategoriaRepository : BaseRepository<Categoria>, ICategoriaRepository
     {
         public CategoriaRepository(ContextoCrudBasico context) : base(context) { }
          

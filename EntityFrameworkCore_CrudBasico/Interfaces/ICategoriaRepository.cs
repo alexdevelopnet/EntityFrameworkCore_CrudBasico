@@ -2,7 +2,7 @@
 
 namespace EntityFrameworkCore_CrudBasico.Interfaces
 {
-    internal interface ICategoriaRepository : IRepository<Categoria>
+    internal interface ICategoriaRepository : IBaseRepository<Categoria>
     {
     }
 }

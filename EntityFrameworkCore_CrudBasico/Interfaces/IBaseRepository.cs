@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using EntityFrameworkCore_CrudBasico.Models;
+using System.Collections.Generic;
 
 namespace EntityFrameworkCore_CrudBasico.Interfaces
 {
-    public interface IService<TEntity> where TEntity : class
+    public interface IBaseRepository<TEntity> where TEntity : EntityBase
     {
         IList<TEntity> ListarTodos();
         TEntity ObterPorId(int id);

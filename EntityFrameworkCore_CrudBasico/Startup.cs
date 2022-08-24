@@ -1,17 +1,11 @@
 using EntityFrameworkCore_CrudBasico.Data;
 using EntityFrameworkCore_CrudBasico.Interfaces;
-using EntityFrameworkCore_CrudBasico.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EntityFrameworkCore_CrudBasico
 {
@@ -34,9 +28,11 @@ namespace EntityFrameworkCore_CrudBasico
             });
             
             services.AddScoped<ContextoCrudBasico>();
-            services.AddScoped<IProdutoRepository, ProdutoRepository>();
-            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
              
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+             
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
